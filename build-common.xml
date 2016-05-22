@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Build Dependecny" default="default">
+	<import file="dependecies.xml"/>
+	<target name="default" depends="dist">
+		<echo>I am Last: but first however depends</echo>
+	</target>
+	
+	<target name="clean" >
+		<echo message="${ant.project.name} - build-common.clean"/>
+	</target>
+	
+	<target name="compile">
+		<echo message="${ant.project.name} - build-common.compile"/>
+	</target>
+	
+	<target name="dist" depends="compile">
+		<echo message="${ant.project.name} - build-common.dist"/>
+	</target>
+	
+	<target name="dist.dependecies">
+		<echo>"Project-Component Name - depend.${ant.project.name}"</echo>
+		<antcall target="depend.${ant.project.name}"/>
+	</target>
+	
+</project>

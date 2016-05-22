@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="ANTCALL" default="default">
+
+	<target name="default">
+		<antcall target="doSomething">
+			<param name="ant.call" value="antcall examples"/>
+		</antcall>
+	</target>
+
+	<target name="doSomething">
+		<echo message="param1=${ant.call}"/>	
+	</target>
+</project>
