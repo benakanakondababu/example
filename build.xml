@@ -19,7 +19,7 @@
 	
 	<target name="dist.dependecies">
 		<echo>"Project-Component Name - depend.${ant.project.name}"</echo>
-		<antcall target="depend.${ant.project.name}"/>
+		<antcall target="depend.all"/>
 	</target>
 	
 </project>
